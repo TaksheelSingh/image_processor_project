@@ -1,92 +1,58 @@
-Image Processor Project
+# Image Processor
 
-Overview
+This is an image processing project that applies various filters like **Blur**, **Sharpen**, **Edge Detection**, **Grayscale**, and **Contrast Enhancement** using the **Strategy Design Pattern**.
 
-This project implements an Image Processing System using the Strategy Design Pattern. It allows users to apply different image processing techniques such as blurring, sharpening, and edge detection to images.
+## Features
+✅ Select an image from a dedicated `stored_images` folder
+✅ Choose a processing technique
+✅ Store the processed image in the `output` folder
+✅ Supports multiple image formats: `.png`, `.jpg`, `.jpeg`
+✅ Error handling for missing files or invalid input
 
-Features
+## Folder Structure
+```
+image_processor_project/
+│── strategies/               # Contains image processing strategies
+│   ├── blur.py               # Blur effect
+│   ├── sharpen.py            # Sharpening effect
+│   ├── edge_detection.py      # Edge detection
+│   ├── grayscale.py          # Grayscale conversion
+│   ├── contrast.py           # Contrast enhancement
+│── stored_images/            # Store images for processing
+│── output/                   # Stores processed images
+│── main.py                    # Main execution script
+│── README.md                  # Project Documentation
+```
 
-✅ Apply different filters (Blur, Sharpen, Edge Detection) using interchangeable strategies✅ Modular and scalable design using the Strategy Pattern✅ Easy to extend by adding new processing strategies✅ Supports multiple image formats (JPG, PNG, etc.)
+## Installation & Usage
+### 1️⃣ Install Dependencies
+Ensure you have OpenCV installed:
+```bash
+pip install opencv-python
+```
 
-Technologies Used
+### 2️⃣ Add Images to `stored_images/`
+Place the image you want to process inside the `stored_images/` folder.
 
-Python 3.x
-
-OpenCV (for image processing)
-
-Pillow (PIL) (for image handling)
-
-Installation
-
-Clone this repository:
-
-git clone https://github.com/TaksheelSingh/image_processor_project.git
-
-Navigate to the project directory:
-
-cd image_processor_project
-
-Create a virtual environment (optional but recommended):
-
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-Install dependencies:
-
-pip install -r requirements.txt
-
-Usage
-
-Place an image in the project directory (e.g., sample.jpg).
-
-Run the program:
-
+### 3️⃣ Run the Program
+```bash
 python main.py
+```
 
-The processed image will be saved in the output directory.
+### 4️⃣ Select an Image & Processing Technique
+- The script will display available images.
+- Choose a processing method from:
+  1️⃣ Blur
+  2️⃣ Sharpen
+  3️⃣ Edge Detection
+  4️⃣ Grayscale
+  5️⃣ Contrast Enhancement
 
-Example Output
+### 5️⃣ Find the Processed Image
+The processed image will be saved in the `output/` folder.
 
-Input: sample.jpg
+## Contribution
+Feel free to contribute by improving the image processing strategies or adding new ones!
 
-Processing: Applying blur filter
-
-Output: output/processed_sample.jpg
-
-Adding New Strategies
-
-To add a new image processing strategy:
-
-Create a new file in strategies/ (e.g., new_filter.py).
-
-Implement the apply method.
-
-import cv2
-import numpy as np
-from strategy import ImageProcessingStrategy
-
-class NewFilter(ImageProcessingStrategy):
-    def apply(self, image):
-        # Custom processing logic
-        return image
-
-Update main.py to include the new filter.
-
-Contribution Guidelines
-
-Fork the repository
-
-Create a new branch (git checkout -b new-feature)
-
-Commit changes (git commit -m "Added new feature")
-
-Push to GitHub (git push origin new-feature)
-
-Create a Pull Request
-
-License
-
-This project is licensed under the MIT License.
-
-Developed by Taksheel Singh Rawat 🚀
-
+## License
+📝 This project is open-source under the **MIT License**.
