@@ -29,30 +29,6 @@ Each filter is implemented as a **Strategy** class and selected dynamically base
 
 ---
 
-## 📦 Project Structure
-
-```
-
-image\_processor\_project/
-├── backend/
-│   ├── app.py
-│   └── strategies/
-│       ├── strategy.py
-│       ├── blur.py
-│       ├── sharpen.py
-│       └── edge\_detection.py
-├── frontend/
-│   ├── index.html
-│   ├── vite.config.js
-│   └── src/
-│       ├── App.jsx
-│       ├── index.css
-│       └── main.jsx
-
-````
-
----
-
 ## 🚀 Getting Started
 
 ### Backend (Flask)
@@ -111,7 +87,3 @@ Made with ❤️ using Python, React, Tailwind, and OpenCV.
 
 ```
 
----
-
-Would you like me to export this as a downloadable `.md` file too?
-```
